@@ -1,0 +1,370 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #e8f5e9;
+    color: #333;
+}
+
+header {
+    background: #2e7d32;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.ENTETE {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.ENTETE img {
+    width: 10%;
+    margin-right: 5%;
+}
+
+.ENTETE h1 {
+    flex-grow: 1;
+    font-size: 2.5rem;
+}
+
+.ENTETE input {
+    width: 20%;
+    margin-right: 10%;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.ENTETE button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ENTETE button:hover {
+    background-color: #388e3c;
+}
+
+.IMAGE_ENTETE img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.INTRODUCTION {
+    padding: 2rem 15%;
+    font-size: 1.2rem;
+    background-color: #fff;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.INTRODUCTION h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.INTRODUCTION p {
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.IMAGE_INTRODUCTION {
+    padding: 2rem 15%;
+    font-size: 1.2rem;
+    background: url('images/Image_background_site.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.OFF_SCREEN_MENU {
+    height: 100vh;
+    width: 100%;
+    max-width: 15%;
+    position: fixed;
+    top: 0;
+    right: -15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    transition: right 0.5s ease;
+    background-color: #388e3c;
+    color: white;
+}
+
+.OFF_SCREEN_MENU a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+.OFF_SCREEN_MENU a:hover {
+    text-decoration: underline;
+}
+
+.OFF_SCREEN_MENU.active {
+    right: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+}
+
+.HAM_MENU {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.HAM_MENU span {
+    height: 5px;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.HAM_MENU span:nth-child(1) {
+    top: 25%;
+}
+
+.HAM_MENU span:nth-child(3) {
+    top: 75%;
+}
+
+.HAM_MENU.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.HAM_MENU.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.HAM_MENU.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.TIPS_LEFT, .TIPS_RIGHT {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 5px #ccc;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TIPS_LEFT_IMG, .TIPS_RIGHT_IMG {
+    height: 300px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.TIPS_LEFT_IMG img, .TIPS_RIGHT_IMG img {
+    width: 300px;
+    object-fit: contain;
+}
+
+.TIPS_LEFT_TXT, .TIPS_RIGHT_TXT {
+    max-width: 90%;
+    text-align: left;
+    font-size: 1.2rem;
+    align-items: center;
+    color: #333;
+    padding: 2rem;
+    background: #e8f5e9;
+}
+
+.TIPS_LEFT_TXT p, .TIPS_RIGHT_TXT p {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.UP_BUTTON {
+    background-color:#4CAF50;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+
+.UP_BUTTON:hover {
+    background-color: #388e3c;
+    cursor: pointer;
+}
+
+footer {
+    background: #2e7d32;
+    color: white;
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+.FOOTER_CONTAINER {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.FOOTER_LOGO {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.FOOTER_LOGO img {
+    width: 50px;
+    height: auto;
+}
+
+.FOOTER_LOGO h2 {
+    font-size: 1.8rem;
+}
+
+.FOOTER_LINKS {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.FOOTER_LINKS a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.FOOTER_LINKS a:hover {
+    text-decoration: underline;
+}
+
+.FOOTER_COPYRIGHT {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.highlight {
+    background-color: coral;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .ENTETE {
+        align-items: center;
+        justify-content: space-between;
+        gap: 5%;
+    }
+
+    .ENTETE img {
+        width: 20%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .ENTETE h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .ENTETE input {
+        display: none;
+    }
+
+    .ENTETE button {
+        width: 100%;
+    }
+
+    .IMAGE_ENTETE img {
+        max-height: 200px;
+    }
+
+    .INTRODUCTION{
+        padding: 1rem 5%;
+        font-size: 1rem;
+    }
+
+    .IMAGE_INTRODUCTION {
+        height: 300px;
+    }
+
+    .OFF_SCREEN_MENU {
+        max-width: 40%;
+        right: -40%;
+    }
+
+    .TIPS_LEFT, .TIPS_RIGHT {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .TIPS_LEFT_IMG img, .TIPS_RIGHT_IMG img {
+        width: 100%;
+        height: auto;
+    }
+
+    .TIPS_LEFT_TXT, .TIPS_RIGHT_TXT {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem 5%;
+    }
+
+    .FOOTER_CONTAINER {
+        gap: 1rem;
+    }
+
+    .FOOTER_LOGO img {
+        width: 30px;
+    }
+
+    .FOOTER_LOGO h2 {
+        font-size: 1.5rem;
+    }
+
+    .FOOTER_LINKS a {
+        font-size: 1rem;
+    }
+
+    .FOOTER_COPYRIGHT {
+        font-size: 0.8rem;
+    }
+}
